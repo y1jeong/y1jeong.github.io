@@ -687,7 +687,11 @@ export const Design: React.FC = () => {
               <Settings className="h-4 w-4" />
             </Button>
             <span className="text-sm text-muted-foreground">
-              Welcome, {(user?.firstName && user?.lastName) ? `${user.firstName} ${user.lastName}` : 'User'}
+              {user ? (
+                `Welcome, ${(user.firstName && user.lastName) ? `${user.firstName} ${user.lastName}` : 'User'}`
+              ) : (
+                'Guest Mode - Design without login'
+              )}
             </span>
           </div>
         </div>

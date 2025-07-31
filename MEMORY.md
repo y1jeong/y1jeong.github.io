@@ -235,6 +235,20 @@ Web application for generating customized perforated panels based on user-upload
   - `docs/todo.md`: Updated task descriptions and contexts
 - **Impact**: Project now configured for deployment to y1jeong.github.io (GitHub Pages user site) instead of project-specific repository
 
+### Guest Access Implementation (2025-01-31)
+- **Objective**: Enable guest users to access the Design page without authentication barriers
+- **Implementation Details**:
+  - Modified `Design.tsx` welcome message to show "Guest Mode - Design without login" for unauthenticated users
+  - Updated `Header.tsx` to make Design link always visible while keeping Gallery link restricted to authenticated users
+  - Verified Layout component allows main content access for all users (sidebar only shown to authenticated users)
+  - Confirmed export functionality works without authentication (uses `optionalAuth` middleware)
+  - All core design features (perforation generation, image processing, export) accessible to guests
+- **Files Modified**:
+  - `src/frontend/src/pages/Design.tsx`: Updated welcome message conditional logic
+  - `src/frontend/src/components/layout/Header.tsx`: Moved Design link outside authentication check
+- **Result**: Guest users can now fully access and use the Design page without login requirements
+- **Impact**: Improved user experience by removing authentication barriers for core functionality
+
 ### Challenges & Solutions
 - Challenge: Complex halftone image analysis
   Solution: Use Canvas API to extract pixel data and convert to grayscale values for perforation mapping

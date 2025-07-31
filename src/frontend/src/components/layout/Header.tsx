@@ -74,21 +74,19 @@ export const Header: React.FC<HeaderProps> = ({
             >
               Home
             </Link>
+            <Link
+              to="/design"
+              className="text-sm font-medium transition-colors hover:text-primary"
+            >
+              Design
+            </Link>
             {isAuthenticated && (
-              <>
-                <Link
-                  to="/design"
-                  className="text-sm font-medium transition-colors hover:text-primary"
-                >
-                  Design
-                </Link>
-                <Link
-                  to="/gallery"
-                  className="text-sm font-medium transition-colors hover:text-primary"
-                >
-                  Gallery
-                </Link>
-              </>
+              <Link
+                to="/gallery"
+                className="text-sm font-medium transition-colors hover:text-primary"
+              >
+                Gallery
+              </Link>
             )}
           </nav>
 
