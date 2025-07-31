@@ -20,6 +20,8 @@ import type {
 // API Configuration
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 const API_TIMEOUT = 30000; // 30 seconds
+const ENABLE_BACKEND = import.meta.env.VITE_ENABLE_BACKEND !== 'false';
+const GUEST_MODE = import.meta.env.VITE_GUEST_MODE === 'true';
 
 // Request interceptor for adding auth token
 class ApiClient {
@@ -50,6 +52,11 @@ class ApiClient {
     endpoint: string,
     options: RequestInit = {}
   ): Promise<ApiResponse<T>> {
+    // If backend is disabled (production mode), return mock responses
+    if (!ENABLE_BACKEND || GUEST_MODE) {
+      return this.getMockResponse<T>(endpoint);
+    }
+
     const url = `${this.baseURL}${endpoint}`;
     
     const config: RequestInit = {
@@ -98,6 +105,27 @@ class ApiClient {
       }
       throw new Error('Unknown error occurred');
     }
+  }
+
+  private async getMockResponse<T>(endpoint: string): Promise<ApiResponse<T>> {
+    // Simulate network delay
+    await new Promise(resolve => setTimeout(resolve, 100));
+
+    // Mock responses for guest mode
+    if (endpoint.includes('/auth/login') || endpoint.includes('/auth/register')) {
+      throw new Error('Authentication is not available in guest mode. Please use the design features without login.');
+    }
+
+    if (endpoint.includes('/auth/me') || endpoint.includes('/auth/refresh')) {
+      throw new Error('Authentication required');
+    }
+
+    // For other endpoints, return success with empty data
+    return {
+      success: true,
+      data: {} as T,
+      message: 'Guest mode - limited functionality'
+    };
   }
 
   // HTTP Methods

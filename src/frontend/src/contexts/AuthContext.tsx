@@ -169,6 +169,15 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   // Initialize auth state from storage
   useEffect(() => {
     const initializeAuth = async () => {
+      // Check if we're in guest mode (no backend available)
+      const isGuestMode = import.meta.env.VITE_GUEST_MODE === 'true' || import.meta.env.VITE_ENABLE_BACKEND === 'false';
+      
+      if (isGuestMode) {
+        // In guest mode, skip authentication and set loading to false
+        dispatch({ type: 'SET_LOADING', payload: false });
+        return;
+      }
+
       const token = getStoredToken();
       const refreshToken = getStoredRefreshToken();
       const user = getStoredUser();
@@ -189,7 +198,9 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   // Auto-refresh token before expiration
   useEffect(() => {
-    if (!state.token || !state.refreshToken) return;
+    // Skip auto-refresh in guest mode
+    const isGuestMode = import.meta.env.VITE_GUEST_MODE === 'true' || import.meta.env.VITE_ENABLE_BACKEND === 'false';
+    if (isGuestMode || !state.token || !state.refreshToken) return;
 
     const refreshInterval = setInterval(async () => {
       try {
