@@ -1,0 +1,54 @@
+{
+  "name": "wight-company-perforated-panels",
+  "version": "1.0.0",
+  "description": "Wight & Company - Perforated Panel Generator",
+  "main": "src/backend/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd src/backend && npm run dev",
+    "dev:frontend": "cd src/frontend && npm run dev",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd src/frontend && npm run build",
+    "build:backend": "cd src/backend && npm run build",
+    "start": "cd src/backend && npm start",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd src/backend && npm test",
+    "test:frontend": "cd src/frontend && npm test",
+    "lint": "eslint src/ --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint src/ --ext .ts,.tsx,.js,.jsx --fix",
+    "setup": "npm run setup:backend && npm run setup:frontend",
+    "setup:backend": "cd src/backend && npm install",
+    "setup:frontend": "cd src/frontend && npm install"
+  },
+  "keywords": [
+    "perforated-panels",
+    "halftone",
+    "cnc",
+    "laser-cutting",
+    "digital-fabrication",
+    "web-application",
+    "react",
+    "nodejs"
+  ],
+  "author": "Wight & Company",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "eslint": "^8.55.0",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "prettier": "^3.1.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "local"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/rhino-perforated-wall/issues"
+  },
+  "homepage": "https://github.com/your-org/rhino-perforated-wall#readme"
+}
