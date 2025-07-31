@@ -1,15 +1,15 @@
-# WightWebApp Deployment - Ready to Deploy! 🚀
+# y1jeong.github.io Deployment - Ready to Deploy! 🚀
 
 ## ✅ Configuration Complete
 
 Your RhinoPerforatedWall project has been **successfully configured** for deployment to:
-**`https://github.com/y1jeong/WightWebApp`**
+**`https://github.com/y1jeong/y1jeong.github.io`**
 
 ## 🎯 What's Been Done
 
 ### ✅ Build Configuration Updated
-- **Vite Config**: Base path changed to `/WightWebApp/`
-- **Package.json**: `build:github` script updated for WightWebApp
+- **Vite Config**: Base path changed to `/` (root domain)
+- **Package.json**: `build:github` script updated for y1jeong.github.io
 - **Build Test**: ✅ Successfully builds with exit code 0
 - **Bundle Size**: Optimized chunks (vendor: 141KB, main: 252KB)
 
@@ -23,8 +23,8 @@ Your RhinoPerforatedWall project has been **successfully configured** for deploy
 
 ### Option A: Copy to Existing Repository
 ```bash
-# 1. Navigate to your WightWebApp repository
-cd /path/to/WightWebApp
+# 1. Navigate to your y1jeong.github.io repository
+cd /path/to/y1jeong.github.io
 
 # 2. Copy the frontend application
 cp -r /path/to/RhinoPerforatedWall/src/frontend/* .
@@ -41,9 +41,9 @@ git push origin main
 
 ### Option B: Clone and Setup
 ```bash
-# 1. Clone the WightWebApp repository
-git clone https://github.com/y1jeong/WightWebApp.git
-cd WightWebApp
+# 1. Clone the y1jeong.github.io repository
+git clone https://github.com/y1jeong/y1jeong.github.io.git
+cd y1jeong.github.io
 
 # 2. Copy files from this project
 # (Copy src/frontend/* and .github/workflows/deploy.yml)
@@ -56,7 +56,7 @@ git push origin main
 
 ## 🌐 Live URL
 Once deployed, your application will be available at:
-**https://y1jeong.github.io/WightWebApp/**
+**https://y1jeong.github.io/**
 
 ## 🎨 Application Features
 
@@ -77,7 +77,7 @@ Once deployed, your application will be available at:
 ## 📋 GitHub Pages Setup
 
 1. **Go to Repository Settings**:
-   - Navigate to `https://github.com/y1jeong/WightWebApp/settings`
+   - Navigate to `https://github.com/y1jeong/y1jeong.github.io/settings`
    - Click "Pages" in the left sidebar
 
 2. **Configure Source**:
@@ -136,7 +136,7 @@ Total: ~489 kB (gzipped: ~131 kB)
 ### 🚀 Deployment Status
 **Status**: ✅ **READY TO DEPLOY**
 
-**Next Step**: Copy files to WightWebApp repository and push to main branch!
+**Next Step**: Copy files to y1jeong.github.io repository and push to main branch!
 
 ---
 

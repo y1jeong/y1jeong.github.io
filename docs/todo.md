@@ -55,11 +55,11 @@
 - [done] Add GitHub Pages specific build script [context: package.json - build:github script with correct base path]
 - [done] Configure permissions and environment for Pages deployment [context: workflow permissions for pages deployment]
 
-### [done] HIGH: WightWebApp Repository Deployment - 2025-01-31
-- [done] Update Vite configuration for WightWebApp base path [context: vite.config.ts - Changed base path from /RhinoPerforatedWall/ to /WightWebApp/]
-- [done] Update package.json build script for WightWebApp [context: build:github script now uses /WightWebApp/ base path]
-- [done] Create comprehensive deployment guide [context: DEPLOYMENT_GUIDE.md - Complete setup instructions for github.com/y1jeong/WightWebApp]
-- [done] Configure project for WightWebApp repository deployment [context: All configuration files updated for new repository target]
+### [done] HIGH: y1jeong.github.io Repository Deployment - 2025-01-31
+- [done] Update Vite configuration for y1jeong.github.io base path [context: vite.config.ts - Changed base path from /RhinoPerforatedWall/ to /]
+- [done] Update package.json build script for y1jeong.github.io [context: build:github script now uses root path]
+- [done] Create comprehensive deployment guide [context: DEPLOYMENT_GUIDE.md - Complete setup instructions for github.com/y1jeong/y1jeong.github.io]
+- [done] Configure project for y1jeong.github.io repository deployment [context: All configuration files updated for new repository target]
 - [done] Implement DXF export for CNC machining [context: dxf-writer library integration]
 - [done] Add SVG export functionality [context: svg.js library, vector graphics]
 - [done] Create PDF export for documentation [context: jsPDF library, print-ready format]

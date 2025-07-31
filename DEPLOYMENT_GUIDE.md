@@ -1,20 +1,20 @@
-# Deployment Guide - WightWebApp
+# Deployment Guide - y1jeong.github.io
 
 ## Overview
-This guide explains how to deploy the RhinoPerforatedWall project to the `github.com/y1jeong/WightWebApp` repository using GitHub Pages.
+This guide explains how to deploy the RhinoPerforatedWall project to the `github.com/y1jeong/y1jeong.github.io` repository using GitHub Pages.
 
 ## Prerequisites
-- GitHub repository `y1jeong/WightWebApp` (public)
+- GitHub repository `y1jeong/y1jeong.github.io` (public)
 - Node.js 18+ installed locally
 - Git configured with your GitHub credentials
 
 ## Deployment Steps
 
 ### Step 1: Repository Setup
-1. Clone or copy this project to the WightWebApp repository:
+1. Clone or copy this project to the y1jeong.github.io repository:
    ```bash
-   git clone https://github.com/y1jeong/WightWebApp.git
-   cd WightWebApp
+   git clone https://github.com/y1jeong/y1jeong.github.io.git
+   cd y1jeong.github.io
    ```
 
 2. Copy the frontend application:
@@ -28,15 +28,15 @@ This guide explains how to deploy the RhinoPerforatedWall project to the `github
    ```
 
 ### Step 2: Configuration Updates
-The following files have been pre-configured for WightWebApp deployment:
+The following files have been pre-configured for y1jeong.github.io deployment:
 
 #### ✅ vite.config.ts
-- Base path set to `/WightWebApp/` for production
+- Base path set to `/` for production (root domain)
 - Build optimization configured
 - Path aliases set up
 
 #### ✅ package.json
-- `build:github` script configured with correct base path
+- `build:github` script configured for root deployment
 - All dependencies included
 
 #### ✅ GitHub Actions Workflow
@@ -45,7 +45,7 @@ The following files have been pre-configured for WightWebApp deployment:
 - Builds from `src/frontend` directory
 
 ### Step 3: Enable GitHub Pages
-1. Go to your repository settings: `https://github.com/y1jeong/WightWebApp/settings`
+1. Go to your repository settings: `https://github.com/y1jeong/y1jeong.github.io/settings`
 2. Navigate to "Pages" in the left sidebar
 3. Under "Source", select "GitHub Actions"
 4. Save the settings
@@ -54,7 +54,7 @@ The following files have been pre-configured for WightWebApp deployment:
 1. Commit and push your changes:
    ```bash
    git add .
-   git commit -m "Initial deployment setup for WightWebApp"
+   git commit -m "Initial deployment setup for y1jeong.github.io"
    git push origin main
    ```
 
@@ -65,7 +65,7 @@ The following files have been pre-configured for WightWebApp deployment:
 
 ### Step 5: Access Your Application
 Once deployed, your application will be available at:
-**https://y1jeong.github.io/WightWebApp/**
+**https://y1jeong.github.io/**
 
 ## Project Features
 The deployed application includes:
@@ -146,4 +146,4 @@ For issues or questions:
 **Ready to deploy!** 🚀
 
 Your Wight & Company perforated panel design application will be live at:
-**https://y1jeong.github.io/WightWebApp/**
+**https://y1jeong.github.io/**

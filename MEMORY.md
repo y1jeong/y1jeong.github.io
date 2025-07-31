@@ -190,25 +190,50 @@ Web application for generating customized perforated panels based on user-upload
 
 ## Date: 2025-01-31
 
-### WightWebApp Repository Deployment Configuration (Completed)
-- **Objective**: Configure project for deployment to `github.com/y1jeong/WightWebApp` repository
+### y1jeong.github.io Repository Deployment Configuration (Completed)
+- **Objective**: Configure project for deployment to `github.com/y1jeong/y1jeong.github.io` repository
 - **Configuration Updates**:
-  - Updated Vite base path from `/RhinoPerforatedWall/` to `/WightWebApp/` in `vite.config.ts`
+  - Updated Vite base path from `/RhinoPerforatedWall/` to `/` in `vite.config.ts`
   - Modified `build:github` script in `package.json` to use correct base path
   - Created comprehensive `DEPLOYMENT_GUIDE.md` with step-by-step instructions
-  - Updated `docs/todo.md` to reflect WightWebApp deployment completion
+  - Updated `docs/todo.md` to reflect y1jeong.github.io deployment completion
 - **Deployment Features**:
   - Automated GitHub Actions workflow for CI/CD
   - Optimized Vite build configuration with code splitting
   - GitHub Pages ready with proper base path handling
   - Complete project transfer instructions
-- **Result**: Project fully configured for deployment to WightWebApp repository
+- **Result**: Project fully configured for deployment to y1jeong.github.io repository
 - **Files Modified**: 
   - `src/frontend/vite.config.ts`
   - `src/frontend/package.json`
   - `DEPLOYMENT_GUIDE.md` (created)
   - `docs/todo.md`
-- **Impact**: Ready for immediate deployment to https://y1jeong.github.io/WightWebApp/
+- **Impact**: Ready for immediate deployment to https://y1jeong.github.io/
+
+### GitHub Repository Push (Completed)
+- **Objective**: Initialize git repository and push code to GitHub
+- **Actions Taken**:
+  - Initialized git repository with `git init`
+  - Created comprehensive `.gitignore` file excluding MongoDB data, node_modules, build files
+  - Added all project files with `git add .`
+  - Created initial commit: "Initial commit: RhinoPerforatedWall project with frontend and backend"
+  - Added remote origin pointing to `https://github.com/y1jeong/y1jeong.github.io.git`
+  - Renamed default branch from 'master' to 'main'
+  - Successfully pushed to GitHub with `git push -u origin main`
+- **Result**: Complete project codebase now available on GitHub
+- **Files Created**: `.gitignore`
+- **Impact**: Project ready for GitHub Pages deployment and collaboration
+
+### Repository Name Update (2025-01-31)
+- **Objective**: Update all project references from WightWebApp to y1jeong.github.io
+- **Files Updated**:
+  - `vite.config.ts`: Base path changed from `/WightWebApp/` to `/` for root domain deployment
+  - `src/frontend/package.json`: Updated build:github script to remove base path argument
+  - `DEPLOYMENT_GUIDE.md`: Updated all repository URLs and deployment instructions
+  - `WIGHTWEBAPP_DEPLOYMENT.md`: Updated repository references and live URLs
+  - `MEMORY.md`: Updated deployment configuration documentation
+  - `docs/todo.md`: Updated task descriptions and contexts
+- **Impact**: Project now configured for deployment to y1jeong.github.io (GitHub Pages user site) instead of project-specific repository
 
 ### Challenges & Solutions
 - Challenge: Complex halftone image analysis
